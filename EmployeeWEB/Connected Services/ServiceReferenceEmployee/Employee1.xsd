@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49437/Employee.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFEmployeesService.DTO" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lastNameBeginning" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstNameBeginning" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patronymicBeginning" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFEmployeesService.DTO" minOccurs="0" name="GetDataResult" nillable="true" type="q1:ArrayOfEmployeeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patronymic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

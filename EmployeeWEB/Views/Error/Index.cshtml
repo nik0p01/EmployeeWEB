@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Неизвестная ошибка</h2>
+
+
+@if (Model != null && HttpContext.Current.IsDebuggingEnabled)
+{
+    <div>
+        <p>
+            <b>Controller:</b> @Model.ControllerName<br />
+            <b>Action:</b> @Model.ActionName<br />
+            <b>Exception:</b> @Model.Exception.Message</p>
+        <p><b>StackTrace:</b></p>
+        <div style="overflow:scroll">
+            <pre>@Model.Exception.StackTrace</pre>
+        </div>
+    </div>
+}
+

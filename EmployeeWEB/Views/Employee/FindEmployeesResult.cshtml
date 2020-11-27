@@ -1,0 +1,33 @@
+﻿@model IEnumerable<EmployeeWEB.Models.Entities.Employee>
+@{
+
+    Layout = null;
+}
+<html>
+<head>
+    <title>Cотрудники</title>
+</head>
+<body>
+    <h3>Сотрудники</h3>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.firstName</td>
+                <td>@employee.lastName</td>
+                <td>@employee.patronymic</td>
+                <td>@employee.birthDay.ToString("0:dd/MM/yyyy")</td>
+                <td>@employee.age</td>
+            </tr>
+        }
+    </table>
+    <a href="~/Employee/index/">Начальная страница</a>
+</body>
+</html>
